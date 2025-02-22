@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(26, 1, 44);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.titulo {
+    font-family: "Playfair Display SC", serif;
+}
+
+main div .left {
+    flex: 2;
+}
+
+main div .right {
+    flex: 1;
+}
+
+.reveal {
+    animation: animated 3s ease;
+}
+
+.menu-mobile {
+    border-radius: 16px 0px 0px 16px;
+}
+
+@keyframes animated {
+    from {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.menuShow {
+    animation: menuOpen 1s forwards;
+    display: block;
+}
+@keyframes menuOpen {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.menuOff {
+    animation: menuOff 1s forwards;
+}
+@keyframes menuOff {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}

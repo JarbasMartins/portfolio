@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./src/styles/input.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./src/styles/output.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- CABEÇALHO DA PAGINA MOBILE/DESKTOP: ADICIONAR FUNÇÃO MODAL BARRA -->
+        <header class="w-full h-full select-none">
+            <ul
+                class="sm:flex hidden gap-5 items-center justify-end px-28 py-5 font-semibold text-base"
+            >
+                <li><a href="#">Trabalhos</a></li>
+                <li><a href="#">Blog</a></li>
+                <li class="bg-amber-700 p-2 rounded-full text-white">
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+            <ul class="sm:hidden block text-end py-3 px-6 text-2xl">
+                <button class="btnModal" onclick="openModal()">
+                    <a class="" href="#"><i class="fa-solid fa-bars"></i></a>
+                </button>
+
+                <section
+                    class="bg-white h-[100vh] w-1/3 absolute hidden top-0 right-0 text-black text-lg menu-mobile p-2 z-20"
+                >
+                    <ul class="gap-y-5">
+                        <li><a href="#">Trabalhos</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <button
+                            class="bg-indigo-950 text-white p-1 rounded-lg mt-5 font-semibold cursor-pointer"
+                            id="btnCloseModal"
+                            onclick="closeModal()"
+                        >
+                            FECHAR
+                        </button>
+                    </ul>
+                </section>
+            </ul>
+        </header>
+        <!-- FIM CABEÇALHO -->
+
+        <!-- HOME PAGINA -->
+
+        <main
+            class="w-full h-full p-10 md:p-32 gap-5 text-center lg:text-start flex flex-col-reverse lg:flex-row justify-center items-center"
+        >
+            <div class="md:p-10 space-y-5 z-10 home-description">
+                <h1
+                    class="md:text-4xl text-2xl left font-extralight home-title"
+                >
+                    Olá, me chamo
+                    <b class="titulo">Jarbas Martins</b>, <br />
+                    atuo como <span><em>Web Desenvolvedor</em></span> e
+                    <span><em>Designer UI/UX.</em></span>
+                </h1>
+                <p class="lg:max-w-3/4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus quos ex nesciunt eligendi cumque unde maxime in
+                    voluptatum commodi minus, perspiciatis impedit eaque esse
+                    ipsum iure totam eos? Natus, error.
+                </p>
+                <ul
+                    class="flex justify-center items-center lg:justify-start gap-3 lg:gap-5 text-2xl"
+                >
+                    <li>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <img
+                    src="./src/assets/minhatofoto3.jpg"
+                    alt=""
+                    class="object-cover right min-h-[300px] min-w-[300px] max-h-[300px] max-w-[300px] rounded-full z-0"
+                />
+            </div>
+        </main>
+        <div class="line bg-white h-[1px] w-[70vw] m-auto my-10"></div>
+
+        <!-- FIM HOME -->
+        <script src="src/js/script.js"></script>
+    </body>
+</html>
